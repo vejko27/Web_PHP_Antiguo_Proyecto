@@ -148,8 +148,8 @@ function getColl($identificator)
 function getTableLength(){// return the SQLTable length
 if($this->tableLength==0)
 	{
-		$query = mysql_query("SELECT COUNT(*) FROM ".$this->sqlTable.";");//������ �� ���-�� �������
-		$this->tableLength = mysql_result($query,0);//������ ���������� �� �������
+		$query = mysql_query("SELECT COUNT(*) FROM ".$this->sqlTable.";");
+		$this->tableLength = mysql_result($query,0);
 	}
 return $this->tableLength;
 }

@@ -8,4 +8,4 @@ $db->dbname = "mysql";//"olympicg_dbolympicglory"
 $db->dbpassword = "";
 
 
-php?>
+?>
