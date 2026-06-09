@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nómina — Inmobiliaria Aurea</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="min-h-screen bg-gray-50 flex items-center justify-center">
+    <main class="w-full max-w-3xl p-6">
+      <section class="bg-white shadow rounded-lg p-6">
+        <div class="flex items-center justify-between mb-6">
+          <h1 class="text-xl font-semibold text-gray-800">Registro de Nómina</h1>
+          <p class="text-sm text-gray-500">Ingrese los datos del empleado</p>
+        </div>
+
+        <form action="omar.php" method="post" class="space-y-6" novalidate>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="nombres" class="block text-sm font-medium text-gray-700">Nombres</label>
+              <input id="nombres" name="nombres" type="text" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" placeholder="Juan Carlos">
+            </div>
+
+            <div>
+              <label for="apellidos" class="block text-sm font-medium text-gray-700">Apellidos</label>
+              <input id="apellidos" name="apellidos" type="text" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" placeholder="Pérez Rodríguez">
+            </div>
+
+            <div>
+              <label for="dni" class="block text-sm font-medium text-gray-700">DNI</label>
+              <input id="dni" name="dni" type="text" pattern="[0-9]{6,20}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" placeholder="12345678">
+            </div>
+
+            <div>
+              <label for="celular" class="block text-sm font-medium text-gray-700">Número de celular</label>
+              <input id="celular" name="celular" type="tel" pattern="[0-9+\-() ]{7,20}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" placeholder="+51 912 345 678">
+            </div>
+
+            <div class="md:col-span-2">
+              <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección fiscal</label>
+              <input id="direccion" name="direccion" type="text" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" placeholder="Calle Falsa 123, Ciudad">
+            </div>
+
+            <div>
+              <label for="puesto" class="block text-sm font-medium text-gray-700">Puesto laboral</label>
+              <input id="puesto" name="puesto" type="text" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" placeholder="Asistente Comercial">
+            </div>
+
+            <div>
+              <label for="sueldo" class="block text-sm font-medium text-gray-700">Sueldo (PEN)</label>
+              <input id="sueldo" name="sueldo" type="number" min="0" step="0.01" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded focus:ring-indigo-500 focus:border-indigo-500" placeholder="1500.00">
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <button type="submit" class="px-4 py-2 bg-indigo-600 text-white rounded font-semibold hover:bg-indigo-700">Guardar nómina</button>
+            <button type="reset" class="px-4 py-2 border rounded text-gray-700 hover:bg-gray-50">Restablecer</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
