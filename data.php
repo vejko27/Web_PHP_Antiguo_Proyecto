@@ -67,27 +67,27 @@ function dataSource()
 	$this->condition="";
 	$this->tableLength = 0;
 }
-function setTable($tab)//���������� ������� �������
+function setTable($tab)
 {
 	$this->sqlTable = $tab;
 }
-function setFields($rec)//���������� ������ �������, rec - string
+function setFields($rec)
 {
 	$this->records = $rec;
 }
-function setOrder($ord,$by)//���������� ������� ������("Desc ��� ASC","��� ���� �� �������� �������������� ������� ����������")
+function setOrder($ord,$by)
 {
 	$this->orderBy = "ORDER BY $by $ord";
 }
-function setLimit($offset,$quantity)//����������� ���������� ������� ("��������","���������� �������")
+function setLimit($offset,$quantity)
 {
 	$this->limit = "LIMIT $offset , $quantity";
 }
-function setWhere($where)//������� �������
+function setWhere($where)
 {
 	$this->condition = "WHERE ".$where;
 }
-function select()//������� �� �������  ������ �� ������ �������� ����������
+function select()
 {
 	if(func_num_args()==1)
 	{
@@ -109,8 +109,8 @@ function dataBind()
 	$this->queryRes = mysql_query($this->sqlQuery);
 	if($this->tableLength==0)
 	{
-		$query = mysql_query("SELECT COUNT(*) FROM ".$this->sqlTable.";");//������ �� ���-�� �������
-		$this->tableLength = mysql_result($query,0);//������ ���������� �� �������
+		$query = mysql_query("SELECT COUNT(*) FROM ".$this->sqlTable.";");
+		$this->tableLength = mysql_result($query,0);
 	}
 	$this->dataBase->Disconnect();
 	$this->numRows = mysql_num_rows($this->queryRes);

@@ -1,4 +1,4 @@
-<?
+<?php
 
 include "data.php";
 $db = new DataBase;
@@ -8,4 +8,4 @@ $db->dbname = "mysql";//"olympicg_dbolympicglory"
 $db->dbpassword = "";
 
 
-?>
+php?>

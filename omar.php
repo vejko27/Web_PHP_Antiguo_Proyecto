@@ -1,3 +1,6 @@
+
+// Estos son parámetros Base para una conexión de BD con
+//MYSQL en nuestro hosting.
 <?php
 echo "omar ";
 include "config.php";
